@@ -1,10 +1,33 @@
-# Astro Starter Kit: Basics
+# Astro Deployment Sample
 
-```sh
-bun create astro@latest -- --template basics
+A production-ready Astro application sample for PaaS platform demonstrations.
+
+## Quick Start
+
+1. Install dependencies:
+```bash
+bun install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+2. Build for production:
+```bash
+bun run build
+```
+
+3. Start the production server:
+```bash
+bun run start
+```
+
+## Environment Variables
+
+### Optional
+- `PORT` - Server port (default: `4321`)
+
+## Production Notes
+
+- Static site generation for optimal performance
+- Configured for production hosting with proper port binding
 
 ## 🚀 Project Structure
 

@@ -16,12 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 
 def health_check(request):
     return JsonResponse({'status': 'healthy'})
 
+def home(request):
+    return HttpResponse('<h1>Hello World!</h1><p>Django deployment sample is running.</p>')
+
 urlpatterns = [
+    path('', home, name='home'),
     path('admin/', admin.site.urls),
     path('health/', health_check, name='health_check'),
 ]
